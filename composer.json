@@ -1,5 +1,5 @@
 {
-    "name": "naxon/nova-field-sortable",
+    "name": "dillingham/nova-field-sortable",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
