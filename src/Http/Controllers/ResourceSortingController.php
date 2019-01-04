@@ -3,13 +3,14 @@
 namespace Naxon\NovaFieldSortable\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use Naxon\NovaFieldSortable\Http\Requests\ReorderResourceRequest;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class ResourceSortingController extends Controller
 {
-    public function handle(ReorderResourceRequest $request)
+    public function handle(NovaRequest $request)
     {
         $request->findResourceOrFail()->authorizeToUpdate($request);
+        
         $direction = $request->get('direction', null);
 
         if (!in_array($direction, ['up', 'down'])) {
@@ -19,7 +20,9 @@ class ResourceSortingController extends Controller
         $model = $request->findModelQuery()->firstOrFail();
 
         if (!method_exists($model, 'moveOrderUp') || !method_exists($model, 'moveOrderDown')) {
-            return response(__('Missing sorting methods on model :model', ['model' => get_class($model)]), 500);
+            return response(__('Missing sorting methods on model :model', [
+                'model' => get_class($model)
+            ]), 500);
         }
 
         if ($direction == 'up') {

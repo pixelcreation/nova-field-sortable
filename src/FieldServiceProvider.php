@@ -2,10 +2,8 @@
 
 namespace Naxon\NovaFieldSortable;
 
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Route;
-use Laravel\Nova\Events\NovaServiceProviderRegistered;
 use Laravel\Nova\Nova;
+use Illuminate\Support\Facades\Route;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
 
