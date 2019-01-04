@@ -5,15 +5,7 @@ Feel free to submit issues or PRs
 ## Installation
 
 ```bash
-"naxon/nova-field-sortable": "dev-master",
-```
-```bash
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/dillingham/nova-field-sortable"
-    }
-],
+composer require dillingham/nova-field-sortable
 ```
 
 ## Usage
