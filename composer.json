@@ -1,11 +1,17 @@
 {
-    "name": "dillingham/nova-field-sortable",
+    "name": "pixel-creation/nova-field-sortable",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
         "nova"
     ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "require": {
         "php": ">=7.1.0",
         "laravel/nova": "*",
