@@ -1,6 +1,6 @@
 <?php
 
-namespace Naxon\NovaFieldSortable\Concerns;
+namespace PixelCreation\NovaFieldSortable\Concerns;
 
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Nova\Http\Requests\NovaRequest;

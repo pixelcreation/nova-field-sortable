@@ -1,6 +1,6 @@
 <?php
 
-namespace Naxon\NovaFieldSortable;
+namespace PixelCreation\NovaFieldSortable;
 
 use Laravel\Nova\Fields\Field;
 

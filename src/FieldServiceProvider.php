@@ -1,6 +1,6 @@
 <?php
 
-namespace Naxon\NovaFieldSortable;
+namespace PixelCreation\NovaFieldSortable;
 
 use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Route;
@@ -14,10 +14,10 @@ class FieldServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-field-sortable', __DIR__.'/../dist/js/field.js');
+            Nova::script('nova-field-sortable', __DIR__ . '/../dist/js/field.js');
         });
     }
 
@@ -26,7 +26,7 @@ class FieldServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->registerRoutes();
     }
@@ -36,11 +36,11 @@ class FieldServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    private function registerRoutes()
+    private function registerRoutes(): void
     {
         Route::domain(config('nova.domain', null))
             ->middleware(config('nova.middleware', []))
-            ->prefix('/nova-vendor/naxon/nova-field-sortable')
+            ->prefix('/nova-vendor/pixelcreation/nova-field-sortable')
             ->group(__DIR__ . '/Http/Routes/api.php');
     }
 }

@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::patch(
     '{resource}/{resourceId}/reorder',
-    'Naxon\NovaFieldSortable\Http\Controllers\ResourceSortingController@handle'
+    'PixelCreation\NovaFieldSortable\Http\Controllers\ResourceSortingController@handle'
 );

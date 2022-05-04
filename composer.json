@@ -1,31 +1,26 @@
 {
-    "name": "pixel-creation/nova-field-sortable",
-    "description": "A Laravel Nova field.",
+    "name": "pixelcreation/nova-field-sortable",
+    "description": "A Nova field for ordering resources.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "eloquent-sortable"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        }
-    ],
     "require": {
-        "php": ">=7.1.0",
-        "laravel/nova": "*",
-        "spatie/eloquent-sortable": "^3.4"
+        "php": ">=8.0",
+        "laravel/nova": "^4.0",
+        "spatie/eloquent-sortable": "^4.0"
     },
     "autoload": {
         "psr-4": {
-            "Naxon\\NovaFieldSortable\\": "src/"
+            "PixelCreation\\NovaFieldSortable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Naxon\\NovaFieldSortable\\FieldServiceProvider"
+                "PixelCreation\\NovaFieldSortable\\FieldServiceProvider"
             ]
         }
     },
