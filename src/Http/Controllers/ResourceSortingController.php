@@ -18,7 +18,7 @@ class ResourceSortingController extends Controller
         $direction = $request->get('direction');
 
         if (!in_array($direction, ['up', 'down'])) {
-            return response('', 500);
+            return response(status: 500);
         }
 
         $model = $request->findModelQuery()->firstOrFail();
@@ -35,6 +35,6 @@ class ResourceSortingController extends Controller
             $model->moveOrderDown();
         }
 
-        return response('', 200);
+        return response(status: 200);
     }
 }
