@@ -8,10 +8,13 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@inertiajs/inertia": "^0.11.0",
+        "@vue/babel-plugin-jsx": "^1.1.1",
         "cross-env": "^5.0",
         "laravel-mix": "^6.0",
         "laravel-nova": "^1.12",
-        "vue-loader": "^16.8"
+        "vue-loader": "^16.8",
+        "vuex": "^4.0.2"
     },
     "dependencies": {
         "vue": "^3.2"
