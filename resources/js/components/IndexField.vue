@@ -1,5 +1,5 @@
 <template>
-  <div class="flex text-gray-400">
+  <div class="flex justify-center text-gray-400">
     <button @click.stop="reorderResource('up')" class="toolbar-button px-2" :class="{ invisible: canNotSortUp }" :aria-label="this.__('Up')" type="button">
       <Icon type="chevron-up"/>
     </button>
